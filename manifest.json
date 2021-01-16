@@ -5,15 +5,18 @@
   "author": "Jacob T. Pfeiffer",
 
   "description": "Adds volume slider to bandcamp music pages",
+  "homepage_url": "https://github.com/Cthuflu/BandcampVolume",
 
   "icons": {
   },
 
   "content_scripts": [
     {
+      "exclude_matches": ["*://*.bandcamp.com/music"],
       "matches": ["*://*.bandcamp.com/*"],
       "js": ["tabVolume.js"],
-      "css": ["sliderStyle.css"]
+      "css": ["sliderStyle.css"],
+      "run_at": "document_idle"
     }
   ]
 
