@@ -4,6 +4,12 @@
   "version": "1.0.1",
   "author": "Jacob T. Pfeiffer",
 
+  "applications": {
+    "gecko": {
+      "id": "BandcampVolume@pfeiffer.codes"
+    }
+  },
+
   "description": "Adds volume slider to bandcamp music pages",
   "homepage_url": "https://github.com/Cthuflu/BandcampVolume",
 
