@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "BandcampVolume",
+  "version": "1.0.1",
+  "author": "Jacob T. Pfeiffer",
+
+  "description": "Adds volume slider to bandcamp music pages",
+
+  "icons": {
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.bandcamp.com/*"],
+      "js": ["tabVolume.js"],
+      "css": ["sliderStyle.css"]
+    }
+  ]
+
+}
