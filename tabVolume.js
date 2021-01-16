@@ -22,13 +22,17 @@ function makeSlider() {
 	var volumeControl = document.createElement("input");
 
 	for(prop in properties) {
+		// Set properties on our volume control object
 		volumeControl[prop] = properties[prop];
 	}
-	setVolume(volume);
+	setVolume(volume); // Set volume on load, also save the set volume
 
-	if (document.getElementById("VolumeSlider")) { // I left this in to not refresh for every change while editing
+	if (document.getElementById("VolumeSlider")) { 
+		// I left this in to not refresh for every change while editing
+		// Debug only
 		document.getElementById("VolumeSlider").parentNode.replaceChild(volumeControl, document.getElementById("VolumeSlider"));
 	} else {
+		// Prepare element to add to page
 		var genRow = document.createElement("tr");
 		var volHold = document.createElement("td");
 		var label = document.createElement("td");
@@ -39,6 +43,8 @@ function makeSlider() {
 		volHold.appendChild(volumeControl);
 		genRow.appendChild(label);
 		genRow.appendChild(volHold);
+
+		// Add element to page
 		document.getElementById("trackInfoInner").children[0].children[0].children[0].appendChild(genRow);
 	}
 	volumeControl.addEventListener("input", function(){setVolume(volumeControl.value)});
