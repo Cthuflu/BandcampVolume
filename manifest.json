@@ -6,7 +6,6 @@
 
   "applications": {
     "gecko": {
-      "id": "BandcampVolume@pfeiffer.codes",
       "strict_min_version": "51.0"
     }
   },
