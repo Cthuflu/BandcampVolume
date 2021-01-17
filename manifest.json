@@ -1,12 +1,13 @@
 {
   "manifest_version": 2,
   "name": "BandcampVolume",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "Jacob T. Pfeiffer",
 
   "applications": {
     "gecko": {
-      "id": "BandcampVolume@pfeiffer.codes"
+      "id": "BandcampVolume@pfeiffer.codes",
+      "strict_min_version": "51.0"
     }
   },
 

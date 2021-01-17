@@ -1,13 +1,13 @@
-input[type=range] {
+input[type=range]#VolumeSlider {
   -webkit-appearance: none;
-  width: 115%;
+  width: 97%;
   background: transparent;
-  margin-top:20px;
-  margin-left: 0.83333em;
-  margin-right: 0.83333em;
+  margin-top: 20px;
+  margin-left: 0.833em;
+  margin-right: 0.833em;
 }
 
-input[type=range]::-moz-range-thumb {
+input[type=range]#VolumeSlider::-moz-range-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   height: 22px;
   width: 12px;
@@ -16,11 +16,11 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
 }
 
-input[type=range]:focus {
+input[type=range]#VolumeSlider:focus {
   outline: none;
 }
 
-input[type=range]::-moz-range-track {
+input[type=range]#VolumeSlider::-moz-range-track {
   width: 100%;
   height: 8px;
   cursor: pointer;
@@ -29,10 +29,33 @@ input[type=range]::-moz-range-track {
   border: 0.2px solid rgba(190,190,190,.5);
 }
 
-.VolumeSliderLabel {
-  text-align:center;
-  line-height: 60px;
-  background-color:white;
-  color:black;
-  font-weight:bold;
+input[type=range]#VolumeSlider::-moz-range-progress {
+  background: rgba(254,254,254,.1);
+  height: 8px;
+}
+
+.VolumeSliderCell {
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  height: 56px;
+}
+.VolumeSliderCell label {
+  display: block;
+  margin-top: 6px;
+}
+.VolumeSliderCell span {
+  font-size: 1.5em;
+}
+
+#VolumeSliderPercent {
+  -moz-appearance: textfield;
+  text-align: right;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  width: 3ch;
+  margin-right: -0.3em;
 }
