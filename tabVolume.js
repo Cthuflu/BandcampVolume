@@ -13,6 +13,7 @@ var VolumeSliderPercent, volumeControl; // To store references to our control ob
 
 var extensionRow = makeElement("tr", {id: "BandcampVolumeSlider"});
 var rowTemplate = `
+<template>
 	<td class="VolumeSliderCell" rowspan="2">
 		<label for="VolumeSliderPercent">Volume</label>
 		<span>
@@ -23,13 +24,19 @@ var rowTemplate = `
 	<td colspan="3">
 		<input id="VolumeSlider" type="range" min="0" max="1" step="0.01"/>
 	</td>
+</template>
 `;
 
 function makeSlider() {
 	console.log("BandcampVolume: Adding Slider...");
 
 	// Add template to created element
-	extensionRow.innerHTML = rowTemplate;	
+	// Rather than using 'innerHTML', set content safely
+	extensionRow.appendChild(
+		new DOMParser()
+			.parseFromString(rowTemplate, 'text/html')
+			.head.firstElementChild.content
+	)
 
 	if (document.getElementById("BandcampVolumeSlider")) { 
 		// Replaces existing item rather than endlessly appending rows on extension reload
