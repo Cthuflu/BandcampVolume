@@ -3,6 +3,8 @@ input[type=range] {
   width: 115%;
   background: transparent;
   margin-top:20px;
+  margin-left: 0.83333em;
+  margin-right: 0.83333em;
 }
 
 input[type=range]::-moz-range-thumb {
